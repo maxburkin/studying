@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
 
                     byte[] win1252Bytes  = win1252.GetBytes(FileName);
 
-                    // ну попробуем - взлетит или всплывет
+                    // try to convert
                     byte[] win1251Bytes = Encoding.Convert(win1252, win1251, win1252Bytes);
 
                     char[] win1251Chars = new char[win1251.GetCharCount(win1251Bytes, 0, win1251Bytes.Length)];
